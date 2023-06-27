@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Cinzel+Decorative:wght@700;900&family=Lexend:wght@700&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300&family=Akaya+Telivigala&family=Cinzel+Decorative:wght@700;900&family=Lexend:wght@700&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Cinzel+Decorative:wght@700;900&family=Lexend:wght@700&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300&family=Akaya+Telivigala&family=Cinzel+Decorative:wght@700;900&family=Lexend:wght@700&family=Russo+One&display=swap');
+
+:root {
+    --primary-100: #DCDCDC;
+    --primary-200: #D3D3D3;
+    --primary-300: #C0C0C0;
+    --primary-400: #A9A9A9;
+    --primary-500: #808080;
+    --primary-600: #696969;
+    --primary-700: #778899;
+    --primary-800: #708090;
+    --primary-900: #2F4F4F;
+    --primary-1000: #000000;
+
+    --fontColor: var(--primary-1000);
+    --backgroundColor: var(--primary-100);
+    --bodyFont: 'Oswald', sans-serif;
+    --headerFont: 'Black Ops One', cursive;
+}
+
+body {
+    margin: 0;
+    color: var(--fontColor);
+    background-color: var(--backgroundColor);
+    font-family: var(--bodyFont);
+    line-height: 2rem;
+}
+
+.navbar {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+
+.nav-center {
+    width: 72vw;
+}
+
+.nav-header {
+    height: 6rem;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.nav-btn i {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display:flex;
+    flex-direction:column;
+    height: 0;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+
+a {
+    text-decoration:none;
+}
+
+.nav-link {
+    display: block;
+    text-align: center;
+    color: var(--fontColor);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--primary-300);
+    letter-spacing: 2px;
+}
+
+.nav-link:hover {
+    color: var(--primary-700);
+}
+
+@media screen and (min-width: 700px)
+{
+    .nav-btn {
+        display:none;
+    }
+
+    .nav-links {
+        height: auto;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .nav-link {
+        border-top: none;
+        margin-left: 2rem;
+    }
+
+    .nav-center {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-link {
+        margin-right:0;
+        margin-left:auto;
+    }
+
+    .nav-center {
+        max-width: 1200px;
+    }
+
+}
+
+.page-footer {
+    height: 4rem;
+    color: var(--fontColor);
+    font-family: var(--bodyFont);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-300);
+}
+
+
+/* STRONA */
+
+/* KONTAKT */
+
+.kontakt {
+    margin-top: 150px;
+    text-align: center;
+    font-size: 30px; 
+    color: rgb(29, 28, 28);
+    font-family: 'Advent Pro', sans-serif;
+}
+
+/* SPOTKANIA */
+
+.spotkania {
+    margin-top: 50px;
+    margin-bottom: 85px;
+    text-align: center;
+}
+
+.spotkanie {
+    margin: 20px;
+    width: 300px;
+    height: 170px;
+    background-color: var(--primary-300);
+    border-color:black;
+    border-radius: 60px;
+}
+
+.spotkanie:hover {
+    background-color: rgb(193, 168, 168);
+}
+
+#spotkanie1, #spotkanie2, #spotkanie3, #spotkanie4, #spotkanie5, #spotkanie6, #spotkanie7 {
+    font-family: 'Advent Pro', sans-serif;
+    color:black;
+    font-size: 20px;
+}
+
+.inner1 {
+	text-align: center;
+}
+
+
+
+/* O NAS */
+
+#slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+}
+
+#slider input[type=radio] {
+    display: none;
+}
+
+#slider label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#slides {
+    padding: 10px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+
+#slide5:checked ~ #slides .inner {
+    margin-left: -400%;
+}
+
+#slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 200px;
+}
+
+#slides .slide {
+    width: 25%;
+    float: left;
+    display: block;
+    height: 100%;
+    color: #fff;
+}
+
+#slides .slide_1 {
+    background: #00171F;
+}
+
+#slides .slide_2 {
+    background: #0c9fd0;
+}
+
+#slides .slide_3 {
+    background: #8c4365;
+}
+
+#slides .slide_4 {
+    background: #89ab4a;
+}
+
+#slides .slide_5 {
+    background: #e40808;
+}
+
+.slide-content {
+    padding: 10px;
+}
+
+#controls {
+    margin: -130px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+
+#controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+}
+
+#controls label:hover {
+    opacity: 1;
+}
+
+#slide1:checked ~ #controls label:nth-child(2) {
+
+}
